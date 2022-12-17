@@ -17,7 +17,7 @@ public class Angle
 
     public static bool operator !=(Angle first, Angle second) => first.degree != second.degree;
 
-    public override bool Equals(object? obj) => obj is Angle a && degree==a.degree;
+    public override bool Equals(object? obj) => obj is Angle a && degree == a.degree;
 
-    public override int GetHashCode() => String.Join("", degree.ToString()).GetHashCode();
+    public override int GetHashCode() => this.degree.ToString().GetHashCode();
 }
