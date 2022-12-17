@@ -5,6 +5,7 @@ public class Angle
     public double degree;
     public Angle(double degree)
     {
+        if(degree == 0) throw new ArgumentException();
         this.degree = degree % 360;
     }
     

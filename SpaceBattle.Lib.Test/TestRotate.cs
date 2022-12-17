@@ -1,8 +1,6 @@
 namespace SpaceBattle.Lib.Test;
+using Xunit;
 public class TestRotate
 {
-    public void Test1()
-    {
 
-    }
 }
