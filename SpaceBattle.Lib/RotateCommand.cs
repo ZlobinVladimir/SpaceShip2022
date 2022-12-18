@@ -1,9 +1,9 @@
 ﻿namespace SpaceBattle.Lib;
 
-class RotateCommand: ICommand
+public class RotateCommand: ICommand
 {
     public IRotatable SomeObj;
-    RotateCommand(IRotatable SomeObj)
+    public RotateCommand(IRotatable SomeObj)
     {
         this.SomeObj = SomeObj;
     }
