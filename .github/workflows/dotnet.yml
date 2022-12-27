@@ -1,6 +1,6 @@
 name: .NET
 
-on: push
+on: [push]
 
 jobs:
   build:
