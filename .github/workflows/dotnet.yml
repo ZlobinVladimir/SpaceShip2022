@@ -21,4 +21,5 @@ jobs:
         run: dotnet test --no-build --verbosity d -p:CollectCoverage=true -p:CoverletOutput=./coverage/coverage.opencover.xml -p:CoverletOutputFormat=opencover
       - name: Codecov
         uses: codecov/codecov-action@v3
-        
+        with:
+          files: coverage/coverage.cobertura.xml
