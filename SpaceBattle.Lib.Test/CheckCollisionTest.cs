@@ -29,5 +29,34 @@ namespace SpaceBattle.Lib.Test {
             var collisionCheck = new CollisionCheck(uObject1.Object, uObject2.Object);
             Assert.ThrowsAny<Exception>(() => collisionCheck.Execute());
         }
+        
+         [Fact]
+        public void CollisionCheckTrue()
+        {
+            var uObject1 = new Mock<IUObject>();
+            var uObject2 = new Mock<IUObject>();
+
+            var checkReturns = new Mock<IStrategy>();
+            checkReturns.Setup(c => c.Run(It.IsAny<object[]>())).Returns((object) true);
+            IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Collision.CheckWithTree", (object[] args) => checkReturns.Object.Run(args)).Execute();
+            
+            var collisionCheck = new CollisionCheck(uObject1.Object, uObject2.Object);
+            Assert.ThrowsAny<Exception>(() => collisionCheck.Execute());
+        }
+
+         [Fact]
+        public void CollisionCheckFalse()
+        {   
+
+            var uObject1 = new Mock<IUObject>();
+            var uObject2 = new Mock<IUObject>();
+
+            var checkReturns = new Mock<IStrategy>();
+            checkReturns.Setup(c => c.Run(It.IsAny<object[]>())).Returns((object) false);
+            IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Collision.CheckWithTree", (object[] args) => checkReturns.Object.Run(args)).Execute();
+            
+            var collisionCheck = new CollisionCheck(uObject1.Object, uObject2.Object);
+            collisionCheck.Execute();
+        }
     }
 }
