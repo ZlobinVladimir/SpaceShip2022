@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="0.9375" version="1.9" timestamp="1673950199" lines-covered="52" lines-valid="52" branches-covered="15" branches-valid="16">
+<coverage line-rate="1" branch-rate="0.9375" version="1.9" timestamp="1674052464" lines-covered="61" lines-valid="61" branches-covered="15" branches-valid="16">
   <sources>
     <source>D:\spaceship2.0\SpaceBattle.Lib\</source>
   </sources>
   <packages>
-    <package name="SpaceBattle.Lib" line-rate="1" branch-rate="0.9375" complexity="29">
+    <package name="SpaceBattle.Lib" line-rate="1" branch-rate="0.9375" complexity="31">
       <classes>
         <class name="SpaceBattle.Lib.Angle" filename="Angle.cs" line-rate="1" branch-rate="0.75" complexity="8">
           <methods>
@@ -124,6 +124,38 @@
             <line number="9" hits="4" branch="False" />
           </lines>
         </class>
+        <class name="SpaceBattle.Lib.StartMoveCommand" filename="StartMoveCommand.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="Execute" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(SpaceBattle.Lib.IMoveCommandStartable)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+                <line number="8" hits="1" branch="False" />
+                <line number="9" hits="1" branch="False" />
+                <line number="10" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="7" hits="1" branch="False" />
+            <line number="8" hits="1" branch="False" />
+            <line number="9" hits="1" branch="False" />
+            <line number="10" hits="1" branch="False" />
+          </lines>
+        </class>
         <class name="SpaceBattle.Lib.Vector" filename="Vector.cs" line-rate="1" branch-rate="1" complexity="17">
           <methods>
             <method name="get_Item" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
@@ -205,11 +237,11 @@
             </method>
             <method name=".ctor" signature="(System.Int32[])" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="6" hits="27" branch="False" />
-                <line number="7" hits="27" branch="False" />
-                <line number="8" hits="27" branch="False" />
-                <line number="9" hits="27" branch="False" />
-                <line number="10" hits="27" branch="False" />
+                <line number="6" hits="28" branch="False" />
+                <line number="7" hits="28" branch="False" />
+                <line number="8" hits="28" branch="False" />
+                <line number="9" hits="28" branch="False" />
+                <line number="10" hits="28" branch="False" />
               </lines>
             </method>
           </methods>
@@ -263,11 +295,11 @@
             <line number="45" hits="2" branch="False" />
             <line number="46" hits="10" branch="False" />
             <line number="47" hits="2" branch="False" />
-            <line number="6" hits="27" branch="False" />
-            <line number="7" hits="27" branch="False" />
-            <line number="8" hits="27" branch="False" />
-            <line number="9" hits="27" branch="False" />
-            <line number="10" hits="27" branch="False" />
+            <line number="6" hits="28" branch="False" />
+            <line number="7" hits="28" branch="False" />
+            <line number="8" hits="28" branch="False" />
+            <line number="9" hits="28" branch="False" />
+            <line number="10" hits="28" branch="False" />
           </lines>
         </class>
       </classes>
