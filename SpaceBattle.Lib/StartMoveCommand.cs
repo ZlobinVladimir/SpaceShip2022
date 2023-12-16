@@ -11,9 +11,9 @@ public class StartMoveCommand : ICommand
 
     public void Execute()
     {
+        IoC.Resolve<ICommand>("Operations.SetProperty", moveCommandStart.Target, "Velocity", moveCommandStart.Properties["Velocity"]);
         var  moveCommand = IoC.Resolve<ICommand>("Commands.MoveCommand", moveCommandStart.Target);
         IoC.Resolve<ICommand>("Queue.Push", moveCommandStart.Queue, moveCommand).Execute();
-        IoC.Resolve<ICommand>("Operations.SetProperty", moveCommandStart.Target, "Velocity", moveCommandStart.Properties["Velocity"]);
         
     }
 }
