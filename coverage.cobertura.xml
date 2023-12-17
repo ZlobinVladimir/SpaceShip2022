@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="0.9375" version="1.9" timestamp="1674052464" lines-covered="61" lines-valid="61" branches-covered="15" branches-valid="16">
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.782" branch-rate="0.8332999999999999" version="1.9" timestamp="1702834293" lines-covered="61" lines-valid="78" branches-covered="15" branches-valid="18">
   <sources>
     <source>D:\spaceship2.0\SpaceBattle.Lib\</source>
   </sources>
   <packages>
-    <package name="SpaceBattle.Lib" line-rate="1" branch-rate="0.9375" complexity="31">
+    <package name="SpaceBattle.Lib" line-rate="0.782" branch-rate="0.8332999999999999" complexity="35">
       <classes>
         <class name="SpaceBattle.Lib.Angle" filename="Angle.cs" line-rate="1" branch-rate="0.75" complexity="8">
           <methods>
@@ -76,6 +76,72 @@
             </line>
             <line number="9" hits="25" branch="False" />
             <line number="10" hits="25" branch="False" />
+          </lines>
+        </class>
+        <class name="SpaceBattle.Lib.CollisionCheck" filename="CheckCollision.cs" line-rate="0" branch-rate="0" complexity="3">
+          <methods>
+            <method name="Execute" signature="()" line-rate="0" branch-rate="0" complexity="2">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="17" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="58" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(SpaceBattle.Lib.IUObject,SpaceBattle.Lib.IUObject)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+                <line number="8" hits="0" branch="False" />
+                <line number="9" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="17" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="58" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="SpaceBattle.Lib.GetDiffStrategy" filename="GetDiffStategy.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Run" signature="(System.Object[])" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="0" branch="False" />
+                <line number="8" hits="0" branch="False" />
+                <line number="9" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
           </lines>
         </class>
         <class name="SpaceBattle.Lib.MoveCommand" filename="MoveCommand.cs" line-rate="1" branch-rate="1" complexity="2">
