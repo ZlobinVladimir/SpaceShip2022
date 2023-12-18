@@ -14,9 +14,9 @@ public class EndMoveCommandTests
         var mockStrategy = new Mock<IStrategy>();
         mockStrategy.Setup(x => x.Run(It.IsAny<object[]>())).Returns(mockCommand.Object);
 
-        IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Commands.MoveCommand", (object[] args) => mockStrategy.Object.Run(args)).Execute();
-        IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Queue.Push", (object[] args) => mockStrategy.Object.Run(args)).Execute();
-        IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Operations.SetProperty", (object[] args) => mockStrategy.Object.Run(args)).Execute();
+        IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Clear.Command", (object[] args) => mockStrategy.Object.Run(args)).Execute();
+        IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Delete.Property", (object[] args) => mockStrategy.Object.Run(args)).Execute();
+        IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Insert.Command", (object[] args) => mockStrategy.Object.Run(args)).Execute();
     }
 
     [Fact]
