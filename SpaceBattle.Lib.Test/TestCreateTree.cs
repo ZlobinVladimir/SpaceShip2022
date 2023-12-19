@@ -17,9 +17,19 @@ namespace Tests.TestDecisionTree
 
 
         [Fact]
+        public void PositiveDecisionTreeTest()
+        {
+            string path = "../../../TestData.txt";
+            DecisionStrategy.Setup(c => c.Run(It.IsAny<object[]>())).Returns(new Dictionary<int, object>()).Verifiable();
+            var mock = new CreateTree(path);
+            mock.Execute();
+            DecisionStrategy.Verify();
+        }
+
+        [Fact]
         public void FileNotFoundException()
         {
-            string path = "MyFile.txt";
+            string path = "NoFile.txt";
             DecisionStrategy.Setup(c => c.Run(It.IsAny<object[]>())).Returns(new Dictionary<int, object>()).Verifiable();
             var mock = new CreateTree(path);
             Assert.Throws<FileNotFoundException>(() => mock.Execute());
