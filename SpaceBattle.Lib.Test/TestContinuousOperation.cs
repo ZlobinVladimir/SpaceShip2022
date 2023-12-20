@@ -2,11 +2,11 @@ using Hwdtech;
 using Hwdtech.Ioc;
 using SpaceBattle.Lib;
 
-public class TestsMacroCommand{
+public class TestContinuousOperation{
     Mock<IStrategy> Strategy1 = new Mock<IStrategy>();
     Mock<IStrategy> Strategy2 = new Mock<IStrategy>();
     Mock<IStrategy> Strategy3 = new Mock<IStrategy>();
-    public TestsMacroCommand(){ 
+    public TestContinuousOperation(){ 
         new InitScopeBasedIoCImplementationCommand().Execute();
         IoC.Resolve<Hwdtech.ICommand>("Scopes.Current.Set", IoC.Resolve<object>("Scopes.New", IoC.Resolve<object>("Scopes.Root"))).Execute();
         IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Game.Queue", (object[] args) => Strategy1.Object.Run(args)).Execute();
