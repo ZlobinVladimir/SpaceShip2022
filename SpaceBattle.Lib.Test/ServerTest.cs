@@ -66,7 +66,6 @@ public class Test_ServerStart
         var output = consoleOutput.ToString();
         Console.SetIn(originalInput);
         Console.SetOut(originalOutput);
-
         Assert.Contains("Starting the server...", output);
         IoC.Resolve<SpaceBattle.Lib.ICommand>("Thread.StartServer", numOfThread).Execute();
         Assert.True(true == starting);
