@@ -99,5 +99,20 @@ public class Test_ServerStart
         Assert.Equal(myThreads.Count, threadsStopCount);
     }
 
-    
+    [Fact]
+    public void ExceptionHandlerStrategyTest()
+    {
+        SpaceBattle.Lib.ICommand command = Mock.Of<SpaceBattle.Lib.ICommand>();
+        Exception exception = new Exception("Test exception");
+        string logFileName = "error.log";
+        string errorMessage = $"Error in command '{command.GetType().Name}': {exception.Message}";
+
+        var strategy = new ExceptionHandlerStrategy();
+
+        strategy.RunStrategy(command, exception);
+
+        Assert.True(File.Exists(logFileName));
+        string[] lines = File.ReadAllLines(logFileName);
+        Assert.Contains(errorMessage, lines[0]);
+    }
 }
