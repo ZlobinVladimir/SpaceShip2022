@@ -8,20 +8,20 @@ public class Server
     {
         int ThreadNumber = int.Parse(args[0]);
 
-        Console.WriteLine("Launching server...");
+        Console.WriteLine("Starting the server...");
 
-        IoC.Resolve<ICommand>("Thread.ConsoleStartServer", ThreadNumber).Execute();
+        IoC.Resolve<ICommand>("Thread.StartServer", ThreadNumber).Execute();
 
         Console.WriteLine("All threads are functioning");
 
         Console.WriteLine("Press any key to stop the server...");
         Console.Read();
 
-        Console.WriteLine("Stopping server...");
+        Console.WriteLine("Stopping the server...");
 
-        IoC.Resolve<ICommand>("Thread.ConsoleStopServer").Execute();
+        IoC.Resolve<ICommand>("Thread.StopServer").Execute();
 
-        Console.WriteLine("Exiting. Press any key to exit...");
+        Console.WriteLine("Press any key to exit...");
         Console.Read();
     }
 }

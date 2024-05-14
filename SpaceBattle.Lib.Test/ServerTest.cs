@@ -33,15 +33,15 @@ public class Test_ServerStart
             return threads;
         }).Execute();
 
-        IoC.Resolve<ICommand>("IoC.Register", "Thread.HardStopTheThreads", (object[] args) => {
+        IoC.Resolve<ICommand>("IoC.Register", "Thread.HardStop", (object[] args) => {
             return new ActionCommand( () => {threadsStopCount++;});
         }).Execute();
 
-        IoC.Resolve<ICommand>("IoC.Register", "Thread.ConsoleStartServer", (object[] args) => {
+        IoC.Resolve<ICommand>("IoC.Register", "Thread.StartServer", (object[] args) => {
             starting = true;
             return new EmptyCommand();
         }).Execute();
-        IoC.Resolve<ICommand>("IoC.Register", "Thread.ConsoleStopServer", (object[] args) => {
+        IoC.Resolve<ICommand>("IoC.Register", "Thread.StopServer", (object[] args) => {
             stopping = true;
             return new EmptyCommand();
         }).Execute();
@@ -54,7 +54,7 @@ public class Test_ServerStart
     {
         int numOfThread = 3;
         var args = new[] { "3" }; 
-        var consoleInput = new StringReader("sampletext~~");
+        var consoleInput = new StringReader("Hello, World!");
         var consoleOutput = new StringWriter();
         var originalInput = Console.In;
         var originalOutput = Console.Out;
@@ -67,13 +67,24 @@ public class Test_ServerStart
         Console.SetIn(originalInput);
         Console.SetOut(originalOutput);
 
-        Assert.Contains("Launching server..", output);
-        IoC.Resolve<SpaceBattle.Lib.ICommand>("Thread.ConsoleStartServer", numOfThread).Execute();
+        Assert.Contains("Starting the server...", output);
+        IoC.Resolve<SpaceBattle.Lib.ICommand>("Thread.StartServer", numOfThread).Execute();
         Assert.True(true == starting);
         Assert.Contains("All threads are functioning", output);
-        Assert.Contains("Stopping server...", output);
-        IoC.Resolve<SpaceBattle.Lib.ICommand>("Thread.ConsoleStopServer").Execute();
+        Assert.Contains("Stopping the server...", output);
+        IoC.Resolve<SpaceBattle.Lib.ICommand>("Thread.StopServer").Execute();
         Assert.True(true == stopping);
-        Assert.Contains("Exiting. Press any key to exit...", output);
+        Assert.Contains("Press any key to exit...", output);
+    }
+
+    [Fact]
+    public void StartThreadTest()
+    {
+
+        int numOfThread = 5;
+        var startServerCommand = new StartServerCommand(numOfThread);
+        startServerCommand.Execute();
+
+        Assert.Equal(numOfThread, threadsStartCount);
     }
 }
