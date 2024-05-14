@@ -20,7 +20,7 @@ public class Test_ServerStart
         var scope = IoC.Resolve<object>("Scopes.New", IoC.Resolve<object>("Scopes.Root"));
 
         IoC.Resolve<ICommand>("Scopes.Current.Set", scope).Execute();
-        IoC.Resolve<ICommand>("IoC.Register", "Thread.CreateAndStartThread", (object[] args) => {
+        IoC.Resolve<ICommand>("IoC.Register", "Thread.StartThread", (object[] args) => {
             return new ActionCommand( () => {threadsStartCount++;});
         }).Execute();
 

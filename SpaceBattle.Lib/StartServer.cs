@@ -13,7 +13,7 @@ public class StartServerCommand : ICommand
     {
         for (int i = 0; i < numOfThread; i++)
         {   
-            IoC.Resolve<ICommand>("Thread.CreateAndStartThread").Execute();
+            IoC.Resolve<ICommand>("Thread.StartThread").Execute();
         }
     }
 }
