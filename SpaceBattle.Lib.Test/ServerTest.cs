@@ -87,4 +87,17 @@ public class Test_ServerStart
 
         Assert.Equal(numOfThread, threadsStartCount);
     }
+
+    [Fact]
+    public void StopThreadTest()
+    {
+        Dictionary<string, string> myThreads = IoC.Resolve<Dictionary<string, string>>("Thread.GetDictionary");
+
+        var StopServerCommand = new StopServerCommand();
+        StopServerCommand.Execute();
+
+        Assert.Equal(myThreads.Count, threadsStopCount);
+    }
+
+    
 }
