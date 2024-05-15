@@ -1,0 +1,253 @@
+{
+  "SpaceBattle.Lib.dll": {
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\ActionCommand.cs": {
+      "SpaceBattle.Lib.ActionCommand": {
+        "System.Void SpaceBattle.Lib.ActionCommand::Execute()": {
+          "Lines": {
+            "13": 8,
+            "14": 8,
+            "15": 8
+          },
+          "Branches": []
+        },
+        "System.Void SpaceBattle.Lib.ActionCommand::.ctor(System.Action)": {
+          "Lines": {
+            "7": 8,
+            "8": 8,
+            "9": 8,
+            "10": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\Angle.cs": {
+      "SpaceBattle.Lib.Angle": {
+        "SpaceBattle.Lib.Angle SpaceBattle.Lib.Angle::op_Addition(SpaceBattle.Lib.Angle,SpaceBattle.Lib.Angle)": {
+          "Lines": {
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean SpaceBattle.Lib.Angle::op_Equality(SpaceBattle.Lib.Angle,SpaceBattle.Lib.Angle)": {
+          "Lines": {
+            "17": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean SpaceBattle.Lib.Angle::op_Inequality(SpaceBattle.Lib.Angle,SpaceBattle.Lib.Angle)": {
+          "Lines": {
+            "19": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean SpaceBattle.Lib.Angle::Equals(System.Object)": {
+          "Lines": {
+            "21": 2
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 21,
+              "Offset": 8,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 SpaceBattle.Lib.Angle::GetHashCode()": {
+          "Lines": {
+            "23": 2
+          },
+          "Branches": []
+        },
+        "System.Void SpaceBattle.Lib.Angle::.ctor(System.Double)": {
+          "Lines": {
+            "6": 26,
+            "7": 26,
+            "8": 27,
+            "9": 25,
+            "10": 25
+          },
+          "Branches": [
+            {
+              "Line": 8,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 8,
+              "Offset": 22,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 25
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\EmptyCommand.cs": {
+      "SpaceBattle.Lib.EmptyCommand": {
+        "System.Void SpaceBattle.Lib.EmptyCommand::Execute()": {
+          "Lines": {
+            "4": 4,
+            "6": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\ExceptionHandlerStrategy.cs": {
+      "SpaceBattle.Lib.ExceptionHandlerStrategy": {
+        "System.Object SpaceBattle.Lib.ExceptionHandlerStrategy::RunStrategy(System.Object[])": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\RotateCommand.cs": {
+      "SpaceBattle.Lib.RotateCommand": {
+        "System.Void SpaceBattle.Lib.RotateCommand::Execute()": {
+          "Lines": {
+            "11": 4,
+            "12": 4,
+            "13": 1
+          },
+          "Branches": []
+        },
+        "System.Void SpaceBattle.Lib.RotateCommand::.ctor(SpaceBattle.Lib.IRotatable)": {
+          "Lines": {
+            "6": 4,
+            "7": 4,
+            "8": 4,
+            "9": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\Server.cs": {
+      "SpaceBattle.Lib.Server": {
+        "System.Void SpaceBattle.Lib.Server::Main(System.String[])": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "10": 1,
+            "12": 1,
+            "14": 1,
+            "16": 1,
+            "17": 1,
+            "19": 1,
+            "21": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\StartServer.cs": {
+      "SpaceBattle.Lib.StartServerCommand": {
+        "System.Void SpaceBattle.Lib.StartServerCommand::Execute()": {
+          "Lines": {
+            "12": 1,
+            "13": 12,
+            "14": 5,
+            "15": 5,
+            "16": 5,
+            "17": 1
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 43,
+              "EndOffset": 5,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 5
+            },
+            {
+              "Line": 13,
+              "Offset": 43,
+              "EndOffset": 45,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void SpaceBattle.Lib.StartServerCommand::.ctor(System.Int32)": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\StopServer.cs": {
+      "SpaceBattle.Lib.StopServerCommand": {
+        "System.Void SpaceBattle.Lib.StopServerCommand::Execute()": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 9,
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 1
+          },
+          "Branches": [
+            {
+              "Line": 9,
+              "Offset": 75,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 9,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+}

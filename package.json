@@ -1,0 +1,11 @@
+{
+  "name": "spaceship2022",
+  "version": "1.0.0",
+  "description": "[![codecov](https://codecov.io/gh/ZlobinVladimir/SpaceShip2022/branch/Rotate/graph/badge.svg?token=HM888L8K1I)](https://codecov.io/gh/ZlobinVladimir/SpaceShip2022)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
