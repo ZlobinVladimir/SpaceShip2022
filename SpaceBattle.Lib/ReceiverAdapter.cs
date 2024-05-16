@@ -6,7 +6,7 @@ public class ReceiverAdapter: IReceiver
     BlockingCollection<ICommand> queue;
     public ReceiverAdapter(BlockingCollection<ICommand> queue)
     {
-        this.queue = queue
+        this.queue = queue;
     }
     public ICommand Receive()
     {
