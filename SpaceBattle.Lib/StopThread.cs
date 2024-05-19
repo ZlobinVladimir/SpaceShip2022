@@ -10,7 +10,7 @@ public class ThreadStopper: ICommand
 
     public void Execute()
     {
-        if(thread.Equals(Thread.CurrentThread))
+        if(thread.ThreadEqual(Thread.CurrentThread))
         {
             thread.Stop();
         }

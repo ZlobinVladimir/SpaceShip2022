@@ -2,5 +2,5 @@ namespace SpaceBattle.Lib;
 
 public interface IStrategy
 {
-    public void StartStrategy(params object[] args);
+    public object StartStrategy(params object[] args);
 }

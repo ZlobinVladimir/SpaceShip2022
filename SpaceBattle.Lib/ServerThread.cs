@@ -63,4 +63,8 @@ public class ServerThread
             exceptionCommand.Execute();
         }
     }
+    public bool GetStop()
+    {
+        return this.stop;
+    }
 }
