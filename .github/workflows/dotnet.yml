@@ -18,7 +18,7 @@ jobs:
       - name: Build
         run: dotnet build --no-restore /p:ContinuousIntegrationBuild=true
       - name: Test
-        run: dotnet test --no-build --collect:"XPlat Code Coverage" --results-directory "coverage"
+        run: dotnet test -p:CollectCoverage=true -p:CoverletOutput=../coverage/ -p:CoverletOutputFormat=opencover --no-build --verbosity d --collect:"XPlat Code Coverage"
       - name: Codecov
         uses: codecov/codecov-action@v3
         with: 
