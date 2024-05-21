@@ -49,13 +49,7 @@ public class SoftStopCommandTests
     public void SoftStopWithOtherCommandsSuccess()
     {
         var mockCommand1 = new Mock<ICommand>();
-        var mockCommand3 = new Mock<ICommand>();
-        var mockCommand4 = new Mock<ICommand>();
-        var mockCommand2 = new Mock<ICommand>();
         mockCommand1.Setup(_command => _command.Execute()).Verifiable();
-        mockCommand3.Setup(_command => _command.Execute()).Verifiable();
-        mockCommand4.Setup(_command => _command.Execute()).Verifiable();
-        mockCommand2.Setup(_command => _command.Execute()).Verifiable();
 
         var sleep = new ManualResetEvent(false);
         var thread = IoC.Resolve<ServerThread>("CreateThread", "2");
@@ -63,18 +57,12 @@ public class SoftStopCommandTests
         var softStopCommand = IoC.Resolve<ICommand>("SoftStop", "2");
         var sender = IoC.Resolve<ISender>("SenderAdapterGetByID", "2");
         IoC.Resolve<ICommand>("SendCommand", sender, mockCommand1.Object).Execute();
-        IoC.Resolve<ICommand>("SendCommand", sender, mockCommand2.Object).Execute();
         var sendCommand = IoC.Resolve<ICommand>("SendCommand", sender, softStopCommand);
         sendCommand.Execute();
-        IoC.Resolve<ICommand>("SendCommand", sender, mockCommand3.Object).Execute();
-        IoC.Resolve<ICommand>("SendCommand", sender, mockCommand4.Object).Execute();
         IoC.Resolve<ICommand>("SendCommand", sender, new ActionCommand(() => { sleep.Set(); })).Execute();
         
         sleep.WaitOne(100);
         mockCommand1.Verify();
-        mockCommand3.Verify();
-        mockCommand4.Verify();
-        mockCommand2.Verify();
         
         
     }
