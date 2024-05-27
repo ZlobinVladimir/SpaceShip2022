@@ -26,4 +26,78 @@ public class TestInterpretCommand
         IoC.Resolve<ICommand>("IoC.Register", "Game.Command.Create.FromMessage", (object[] args) => new CreateGameCommandFromMessageStrategy().Strategy(args)).Execute();
         IoC.Resolve<ICommand>("IoC.Register", "Game.Queue.Push", (object[] args) => new GameQueuePushCommandStrategy().Strategy(args)).Execute();
     }
+
+    [Fact]
+    public void SuccessfulPush()
+    {
+        Mock<SpaceBattle.Lib.ICommand> mockCommand = new Mock<SpaceBattle.Lib.ICommand>();
+
+        Mock<IInterpretMessage> mockMessage = new Mock<IInterpretMessage>();
+        mockMessage.SetupGet(x => x.GameID).Returns(1);
+        mockMessage.SetupGet(x => x.TypeCommand).Returns("Test");
+        mockMessage.SetupGet(x => x.Parameters).Returns(new Dictionary<string, object> { { "Test", 1 } });
+        mockMessage.SetupGet(x => x.ObjectID).Returns(1);
+
+        IoC.Resolve<ICommand>("IoC.Register", "Game.Command.Test", (object[] args) => mockCommand.Object).Execute();
+        var intepretcmd = new InterpretCommand(mockMessage.Object);
+        intepretcmd.Execute();
+        Assert.True(gameQueueMap[1].Count() == 1);
+    }
+
+    [Fact]
+    public void GetGameQueueThrowsException()
+    {
+        Mock<SpaceBattle.Lib.ICommand> mockCommand = new Mock<SpaceBattle.Lib.ICommand>();
+
+        Mock<IUObject> mockUObject = new Mock<IUObject>();
+        mockUObject.Setup(x => x.setProperty(It.IsAny<string>(), It.IsAny<object>())).Verifiable();
+
+        Mock<IInterpretMessage> mockMessage = new Mock<IInterpretMessage>();
+        mockMessage.SetupGet(x => x.GameID).Returns(22);
+        mockMessage.SetupGet(x => x.TypeCommand).Returns("Test");
+        mockMessage.SetupGet(x => x.Parameters).Returns(new Dictionary<string, object> { { "Test", 1 } });
+        mockMessage.SetupGet(x => x.ObjectID).Returns(1);
+
+        IoC.Resolve<ICommand>("IoC.Register", "Game.Command.Test", (object[] args) => mockCommand.Object).Execute();
+        var intepretcmd = new InterpretCommand(mockMessage.Object);
+        Assert.Throws<Exception>(() => { intepretcmd.Execute(); });
+    }
+
+    [Fact]
+    public void GetGameUObjectThrowsException()
+    {
+        Mock<SpaceBattle.Lib.ICommand> mockCommand = new Mock<SpaceBattle.Lib.ICommand>();
+
+        Mock<IUObject> mockUObject = new Mock<IUObject>();
+        mockUObject.Setup(x => x.setProperty(It.IsAny<string>(), It.IsAny<object>())).Verifiable();
+
+        Mock<IInterpretMessage> mockMessage = new Mock<IInterpretMessage>();
+        mockMessage.SetupGet(x => x.GameID).Returns(1);
+        mockMessage.SetupGet(x => x.TypeCommand).Returns("Test");
+        mockMessage.SetupGet(x => x.Parameters).Returns(new Dictionary<string, object> { { "Test", 1 } });
+        mockMessage.SetupGet(x => x.ObjectID).Returns(22);
+
+        IoC.Resolve<ICommand>("IoC.Register", "Game.Command.Test", (object[] args) => mockCommand.Object).Execute();
+        var intepretcmd = new InterpretCommand(mockMessage.Object);
+        Assert.Throws<Exception>(() => { intepretcmd.Execute(); });
+    }
+
+    [Fact]
+    public void GetPropertyFromMessageThrowsException()
+    {
+        Mock<SpaceBattle.Lib.ICommand> mockCommand = new Mock<SpaceBattle.Lib.ICommand>();
+
+        Mock<IUObject> mockUObject = new Mock<IUObject>();
+        mockUObject.Setup(x => x.setProperty(It.IsAny<string>(), It.IsAny<object>())).Verifiable();
+
+        Mock<IInterpretMessage> mockMessage = new Mock<IInterpretMessage>();
+        mockMessage.SetupGet(x => x.GameID).Throws(new Exception());
+        mockMessage.SetupGet(x => x.TypeCommand).Returns("Test");
+        mockMessage.SetupGet(x => x.Parameters).Returns(new Dictionary<string, object> { { "Test", 1 } });
+        mockMessage.SetupGet(x => x.ObjectID).Returns(1);
+
+        IoC.Resolve<ICommand>("IoC.Register", "Game.Command.Test", (object[] args) => mockCommand.Object).Execute();
+        var intepretcmd = new InterpretCommand(mockMessage.Object);
+        Assert.Throws<Exception>(() => { intepretcmd.Execute(); });
+    }
 }
