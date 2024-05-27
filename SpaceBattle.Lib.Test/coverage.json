@@ -1,0 +1,242 @@
+{
+  "SpaceBattle.Lib.dll": {
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\ActionCommand.cs": {
+      "SpaceBattle.Lib.ActionCommand": {
+        "System.Void SpaceBattle.Lib.ActionCommand::Execute()": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1
+          },
+          "Branches": []
+        },
+        "System.Void SpaceBattle.Lib.ActionCommand::.ctor(System.Action)": {
+          "Lines": {
+            "7": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\Angle.cs": {
+      "SpaceBattle.Lib.Angle": {
+        "SpaceBattle.Lib.Angle SpaceBattle.Lib.Angle::op_Addition(SpaceBattle.Lib.Angle,SpaceBattle.Lib.Angle)": {
+          "Lines": {
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean SpaceBattle.Lib.Angle::op_Equality(SpaceBattle.Lib.Angle,SpaceBattle.Lib.Angle)": {
+          "Lines": {
+            "17": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean SpaceBattle.Lib.Angle::op_Inequality(SpaceBattle.Lib.Angle,SpaceBattle.Lib.Angle)": {
+          "Lines": {
+            "19": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean SpaceBattle.Lib.Angle::Equals(System.Object)": {
+          "Lines": {
+            "21": 2
+          },
+          "Branches": [
+            {
+              "Line": 21,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 21,
+              "Offset": 8,
+              "EndOffset": 26,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Int32 SpaceBattle.Lib.Angle::GetHashCode()": {
+          "Lines": {
+            "23": 2
+          },
+          "Branches": []
+        },
+        "System.Void SpaceBattle.Lib.Angle::.ctor(System.Double)": {
+          "Lines": {
+            "6": 26,
+            "7": 26,
+            "8": 27,
+            "9": 25,
+            "10": 25
+          },
+          "Branches": [
+            {
+              "Line": 8,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 8,
+              "Offset": 22,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 25
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\CreateGameCommandFromMessageStrategy.cs": {
+      "SpaceBattle.Lib.CreateGameCommandFromMessageStrategy": {
+        "System.Object SpaceBattle.Lib.CreateGameCommandFromMessageStrategy::Strategy(System.Object[])": {
+          "Lines": {
+            "7": 4,
+            "8": 4,
+            "10": 4,
+            "12": 6,
+            "14": 3,
+            "15": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\GameQueuePushStrategy.cs": {
+      "SpaceBattle.Lib.GameQueuePushCommandStrategy": {
+        "System.Object SpaceBattle.Lib.GameQueuePushCommandStrategy::Strategy(System.Object[])": {
+          "Lines": {
+            "7": 2,
+            "8": 2,
+            "10": 2,
+            "12": 2,
+            "14": 4,
+            "15": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\GetGameQueue.cs": {
+      "SpaceBattle.Lib.GetGameQueueStrategy": {
+        "System.Object SpaceBattle.Lib.GetGameQueueStrategy::Strategy(System.Object[])": {
+          "Lines": {
+            "7": 2,
+            "8": 2,
+            "12": 2,
+            "13": 1,
+            "14": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": [
+            {
+              "Line": 12,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 12,
+              "Offset": 35,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\GetGameUObjectStrategy.cs": {
+      "SpaceBattle.Lib.GetGameUObjectStrategy": {
+        "System.Object SpaceBattle.Lib.GetGameUObjectStrategy::Strategy(System.Object[])": {
+          "Lines": {
+            "8": 4,
+            "9": 4,
+            "13": 4,
+            "14": 3,
+            "15": 3,
+            "17": 1,
+            "18": 3
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 35,
+              "EndOffset": 37,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 13,
+              "Offset": 35,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\InterpretCommand.cs": {
+      "SpaceBattle.Lib.InterpretCommand": {
+        "System.Void SpaceBattle.Lib.InterpretCommand::Execute()": {
+          "Lines": {
+            "11": 4,
+            "12": 4,
+            "14": 3,
+            "15": 1
+          },
+          "Branches": []
+        },
+        "System.Void SpaceBattle.Lib.InterpretCommand::.ctor(SpaceBattle.Lib.IInterpretMessage)": {
+          "Lines": {
+            "8": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\SpaceShip2022\\SpaceBattle.Lib\\RotateCommand.cs": {
+      "SpaceBattle.Lib.RotateCommand": {
+        "System.Void SpaceBattle.Lib.RotateCommand::Execute()": {
+          "Lines": {
+            "11": 4,
+            "12": 4,
+            "13": 1
+          },
+          "Branches": []
+        },
+        "System.Void SpaceBattle.Lib.RotateCommand::.ctor(SpaceBattle.Lib.IRotatable)": {
+          "Lines": {
+            "6": 4,
+            "7": 4,
+            "8": 4,
+            "9": 4
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
